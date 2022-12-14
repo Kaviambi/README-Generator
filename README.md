@@ -1,11 +1,11 @@
 # README Generator
 
   ## License:
-  [![license](https://img.shields.io/badge/license-Apache 2.0-blue.svg)](https://opensource.org/licenses/Apache 2.0)
+  [![license](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache_2.0)
  
   
   ## Description
-  This application will generate README file.
+  This application will generate readme file.
 
   ## Table of Contents
   *[Installation](#installation)
@@ -16,16 +16,16 @@
   *[Questions](#question)
 
   ## Installation 
-  npm install
+  npm index in terminal
 
   ## Usuage
   README can be generated for any project.
 
   ## License 
-  Apache 2.0
+  Apache_2.0
 
   ## Contribution 
-  README contribution
+  Contribution 
 
   ## Test
   test in terminal
@@ -33,4 +33,4 @@
   ## Questions:
   -GitHub: [kavic](https://github.com/kavic)
   -Email: [kavicse.23@gmail.com];
-  undefined
+ 

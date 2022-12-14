@@ -40,7 +40,7 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Choose a License',
-        choices: ['Apache 2.0', 'MIT', 'Boost 1.0', 'MPL 2.0']
+        choices: ['Apache_2.0', 'MIT', 'Boost_1.0', 'MPL_2.0']
     },
 
     //Contribution
