@@ -1,10 +1,11 @@
-# fsdf
+# README Generator
 
   ## License:
- (https://img.shields.io/badge/license-MPL 2.0-blue.svg)](https://opensource.org/licenses/MPL 2.0)
+  [![license](https://img.shields.io/badge/license-Apache 2.0-blue.svg)](https://opensource.org/licenses/Apache 2.0)
+ 
   
   ## Description
-  fd
+  This application will generate README file.
 
   ## Table of Contents
   *[Installation](#installation)
@@ -15,21 +16,21 @@
   *[Questions](#question)
 
   ## Installation 
-  sdf
+  npm install
 
   ## Usuage
-  fsd
+  README can be generated for any project.
 
   ## License 
-  MPL 2.0
+  Apache 2.0
 
   ## Contribution 
-  fsdf
+  README contribution
 
   ## Test
-  sdfds
+  test in terminal
 
   ## Questions:
-  -GitHub: [dsf](https://github.com/dsf)
-  -Email: [sd];
+  -GitHub: [kavic](https://github.com/kavic)
+  -Email: [kavicse.23@gmail.com];
   undefined

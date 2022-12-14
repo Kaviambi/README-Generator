@@ -1,10 +1,12 @@
 
-//function to generate markdown for README
+
+//Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
   ## License:
- (https://img.shields.io/badge/license-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+  [![license](https://img.shields.io/badge/license-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+ 
   
   ## Description
   ${data.description}
@@ -33,9 +35,9 @@ function generateMarkdown(data) {
   ${data.test}
 
   ## Questions:
-  -You can find more of my work at GitHub:  [${data.github}](https://github.com/${data.github})
-  -If you have any questions please contact me at Email: [${data.email}];
- 
+  -GitHub: [${data.github}](https://github.com/${data.github})
+  -Email: [${data.email}];
+  ${data.question}
 `;
 }
 
@@ -44,8 +46,9 @@ module.exports = generateMarkdown;
 
 
 
-// Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+
+// // Create a function that returns a license badge based on which license is passed in
+// // If there is no license, return an empty string
 // function renderLicenseBadge(license) {
 //   let badge = '';
 //   if(license === 'Apache 2.0'){
@@ -62,8 +65,8 @@ module.exports = generateMarkdown;
 // return badge;
 // }
 
-// Create a function that returns the license link
-// If there is no license, return an empty string
+// // Create a function that returns the license link
+// // If there is no license, return an empty string
 // function renderLicenseLink(license) {
 //   let licenseLink = '';
 //   if(license === 'Apache 2.0'){
@@ -80,8 +83,9 @@ module.exports = generateMarkdown;
 // return licenseLink;
 // }
 
-//Create a function that returns the license section of README
-//If there is no license, return an empty string
+
+// //Create a function that returns the license section of README
+// //If there is no license, return an empty string
 // function renderLicenseSection(license) {
 //   let licenseSection = ''
 //   if (license === 'none'){
