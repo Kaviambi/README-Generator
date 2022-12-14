@@ -3,6 +3,7 @@
 // Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  let badge = '';
   if(license === 'Apache 2.0'){
     badge = `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
   } else if(license === 'MIT'){
@@ -39,7 +40,7 @@ return licenseLink;
 //Create a function that returns the license section of README
 //If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let licenseSection = '';
+  let licenseSection = ''
   if (license === 'none'){
     licenseSection = '';
   }else {
@@ -52,22 +53,21 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  
-  ##${renderLicenseSection(data.license)}
-  ${renderLicenseBadge(data.license)}
+  ## License:
+  [![license](https://img.shields.io/badge/license-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+  ## ${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
   ###${renderLicenseLink(data.license)}
   
-
   ## Description
   ${data.description}
 
   ## Table of Contents
-  ###-[Installation] (#installation)
-  ###-[Usuage] (#usuage)
-  ###-[License] (#license)
-  ###-[Contribution] (#contribution)
-  ###-[Test] (#test)
-  ###-[Questions](#question)
+  *[Installation] (#installation)
+  *[Usuage] (#usuage)
+  *[License] (#license)
+  *[Contribution] (#contribution)
+  *[Test] (#test)
+  *[Questions](#question)
 
   ## Installation 
   ${data.installation}
@@ -84,7 +84,9 @@ function generateMarkdown(data) {
   ## Test
   ${data.test}
 
-  ## Questions
+  ## Questions:
+  -GitHub: [${data.github}](https://github.com/${data.github})
+  -Email: [${data.email}];
   ${data.question}
 `;
 }

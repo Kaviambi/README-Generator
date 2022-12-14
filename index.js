@@ -5,8 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 const { writeFile } = require('fs').promises;
 
 // TODO: Create an array of questions for user input
-const promptUser = () => {
-    return inquirer.prompt([
+const questions = [
 
     //Title of the project
     {
@@ -62,37 +61,45 @@ const promptUser = () => {
     {
         type: 'input',
         name:'github',
-        message: 'Enter your GitHub name',
+        message: 'Enter your GitHub username.',
     },
 
     //Email 
     {
         type:'input',
-        name:'email address',
+        name:'email',
         message: 'Enter your Email address to Contact us:',
     },
-    ]);
+    ]
+
+
+//Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName,data,(error) => {
+        if(error){
+            return console.log(error);
+        }else{
+            console.log("README file is created");
+        }
+    })
 };
 
-// TODO: Create a function to write README file
-// function writeFile(fileName, data) {
-//     fs.writeFile(fileName,data,(error) => {
-//         if(error){
-//             return console.log(error);
-//         }else{
-//             console.log("README file is created");
-//         }
-//     })
+//Create a function to initialize app
+// const init = () => {
+// promptUser()
+//     .then((data) => writeFile('README.md', generateMarkdown(data)))
+//     .then(() => console.log('README file is created'))
+//     .catch((err) => console.error(err));
 // };
 
-// TODO: Create a function to initialize app
-const init = () => {
-promptUser()
-    .then((answers) => writeFile('README.md', generateMarkdown(answers)))
-    .then(() => console.log('README file is created'))
-    .catch((err) => console.error(err));
-};
-
+function init() {
+    inquirer.prompt(questions)
+    .then(function(userInput){
+        console.log(userInput);
+        
+        writeToFile("README.md", generateMarkdown(userInput));
+    });
+}
 
 // Function call to initialize app
 init();
